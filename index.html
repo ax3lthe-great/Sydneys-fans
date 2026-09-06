@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Sydney Sweeney Official Fan Club </title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:        #12160E;
+    --panel:     #191E13;
+    --panel-line:#2C3322;
+    --gold:      #C9A667;
+    --gold-soft: #B99A62;
+    --cream:     #EFE9DA;
+    --muted:     #9A9787;
+    --tier2-bg:  #C9A667;
+    --tier2-text:#1B1D10;
+  }
+  *{ box-sizing:border-box; }
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:'Jost', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+  .serif{ font-family:'Cormorant Garamond', serif; }
+  .eyebrow{
+    font-family:'Jost', sans-serif;
+    letter-spacing:.28em;
+    font-size:.7rem;
+    color:var(--gold);
+    font-weight:500;
+  }
+  .rule{
+    width:2.75rem; height:1px; background:var(--gold);
+    display:inline-block;
+  }
+  .panel{
+    background:var(--panel);
+    border:1px solid var(--panel-line);
+  }
+  .btn-outline{
+    border:1px solid var(--gold);
+    color:var(--gold);
+    transition:background .2s ease, color .2s ease;
+  }
+  .btn-outline:hover{ background:var(--gold); color:var(--tier2-text); }
+  .btn-solid{
+    background:var(--gold);
+    color:var(--tier2-text);
+    transition:opacity .2s ease;
+  }
+  .btn-solid:hover{ opacity:.88; }
+  .tier2{
+    background:var(--tier2-bg);
+    color:var(--tier2-text);
+  }
+  .tier2 .muted2{ color:#4B4526; }
+  .hero-quote{
+    background:linear-gradient(0deg, rgba(18,22,14,0.92) 0%, rgba(18,22,14,0.15) 55%, rgba(18,22,14,0.55) 100%);
+  }
+  .nav-link{ color:var(--cream); transition:color .2s ease; }
+  .nav-link:hover{ color:var(--gold); }
+  ::selection{ background:var(--gold); color:var(--tier2-text); }
+  input:focus{ outline:none; }
+</style>
+</head>
+<body class="antialiased">
+
+<!-- Navigation section -->
+<header class="sticky top-0 z-50" style="background:var(--bg)">
+  <div class="max-w-3xl mx-auto px-6 pt-8 pb-4 flex items-center justify-between">
+    <div class="leading-tight">
+      <div class="serif text-lg tracking-[0.15em]"> Sydney Sweeney </div>
+      <div class="eyebrow tracking-[0.3em] text-[0.6rem]" style="color:var(--muted)">OFFICIAL</div>
+    </div>
+    <button id="menuBtn" aria-label="Menu" aria-expanded="false" class="flex flex-col gap-1.5 p-2 -m-2">
+      <span id="barTop" class="block w-6 h-px bg-[var(--cream)] transition-transform duration-200"></span>
+      <span id="barBottom" class="block w-6 h-px bg-[var(--cream)] transition-transform duration-200"></span>
+    </button>
+  </div>
+
+  <!-- Dropdown menu -->
+  <nav id="mobileMenu" class="hidden max-w-3xl mx-auto px-6 pb-6">
+    <div class="flex flex-col border-t" style="border-color:var(--panel-line)">
+      <a href="#hero" data-menu-link class="nav-link eyebrow text-[0.7rem] py-4 border-b" style="border-color:var(--panel-line)">HOME</a>
+      <a href="#membership" data-menu-link class="nav-link eyebrow text-[0.7rem] py-4 border-b" style="border-color:var(--panel-line)">MEMBERSHIP</a>
+      <a href="#reviews" data-menu-link class="nav-link eyebrow text-[0.7rem] py-4">REVIEWS</a>
+    </div>
+  </nav>
+</header>
+
+<!-- The Hero section -->
+<section id="hero" class="max-w-3xl mx-auto px-6 pt-14 scroll-mt-24">
+  <div class="flex items-center gap-3 mb-5">
+    <span class="rule"></span>
+    <span class="eyebrow">COMMUNITY</span>
+  </div>
+  <h1 class="serif text-5xl sm:text-6xl leading-[1.05]">
+    Official<br><span class="italic" style="color:var(--gold)">Fan Club</span>
+  </h1>
+  <p class="mt-5 max-w-md text-[0.95rem] leading-relaxed" style="color:var(--muted)">
+    A welcoming place for fans to celebrate Sydney's work, follow every new release, and share the moments that stay with us.
+  </p>
+
+  <!-- Hero and Image part -->
+  <div class="relative mt-10 rounded-sm overflow-hidden panel" style="aspect-ratio:4/5;">
+    <img id="heroImage" src="https://hips.hearstapps.com/hmg-prod/images/sydney-sweeney-attends-the-armani-beauty-passione-party-news-photo-1757693946.pjpeg?crop=0.811xw:0.541xh;0.11xw,0.056xh&resize=640:*"
+         alt="Jmarox"
+         class="absolute inset-0 w-full h-full object-cover">
+    <div class="absolute inset-0 hero-quote"></div>
+    <div class="absolute bottom-6 left-6 right-6">
+      <p class="serif italic text-xl leading-snug" style="color:var(--cream)">
+        Every song deserves<br>its listeners.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Stats -->
+<section class="max-w-3xl mx-auto px-6 mt-16 grid grid-cols-2 sm:grid-cols-4 gap-px" style="background:var(--panel-line)">
+  <div class="panel !border-0 px-4 py-8 text-center">
+    <div class="serif text-3xl" style="color:var(--gold)">12M+</div>
+    <div class="eyebrow mt-2 text-[0.6rem]" style="color:var(--muted)"> INSTAGRAM FOLLOWERS </div>
+  </div>
+  <div class="panel !border-0 px-4 py-8 text-center">
+    <div class="serif text-3xl" style="color:var(--gold)"> 180+ </div>
+    <div class="eyebrow mt-2 text-[0.6rem]" style="color:var(--muted)"> COUNTRIES REACHED </div>
+  </div>
+  <div class="panel !border-0 px-4 py-8 text-center">
+    <div class="serif text-3xl" style="color:var(--gold)"> 2 </div>
+    <div class="eyebrow mt-2 text-[0.6rem]" style="color:var(--muted)"> EMMY NOMINATIONS </div>
+  </div>
+  <div class="panel !border-0 px-4 py-8 text-center">
+    <div class="serif text-3xl" style="color:var(--gold)"> 15+ </div>
+    <div class="eyebrow mt-2 text-[0.6rem]" style="color:var(--muted)"> YEARS OF WORK </div>
+  </div>
+</section>
+
+<!-- Membership part -->
+<section id="membership" class="max-w-3xl mx-auto px-6 mt-20 scroll-mt-24">
+  <div class="flex items-center gap-3 mb-5">
+    <span class="rule"></span>
+    <span class="eyebrow">MEMBERSHIP</span>
+  </div>
+  <h2 class="serif text-4xl leading-tight">
+    Choose your <span class="italic" style="color:var(--gold)">place in the club.</span>
+  </h2>
+  <p class="mt-4 max-w-md text-[0.95rem] leading-relaxed" style="color:var(--muted)">
+    Three simple ways to stay close to the Sweeney and connect with a growing community of fans.
+  </p>
+
+  <div class="mt-10 space-y-5">
+
+    <!-- Tier One -->
+    <div class="panel rounded-sm p-7">
+      <div class="flex items-center justify-between">
+        <span class="eyebrow text-[0.6rem]">THE INNER CIRCLE</span>
+        <span class="eyebrow text-[0.6rem]">$150 / YEAR</span>
+      </div>
+      <h3 class="serif text-3xl mt-3">Tier One</h3>
+      <p class="mt-2 text-sm" style="color:var(--muted)">A simple, low-key way to stay connected with the club.</p>
+      <ul class="mt-5 space-y-2 text-sm">
+        <li class="flex items-center gap-2"><span style="color:var(--gold)">✓</span> Digital membership card </li>
+        <li class="flex items-center gap-2"><span style="color:var(--gold)">✓</span> Monthly club notes and group calls with Sweeney </li>
+        <li class="flex items-center gap-2"><span style="color:var(--gold)">✓</span> Early announcement access </li>
+      </ul>
+      <a href="mailto:sweeneysmanagement@outlook.com?subject=I%27d%20like%20to%20join%20Tier%20One&body=Hey!%20I%27d%20love%20to%20sign%20up%20for%20Tier%20One%20and%20stay%20in%20the%20loop%20with%20the%20monthly%20notes%20and%20early%20announcements.%20Let%20me%20know%20how%20to%20get%20started!"
+         class="mt-6 inline-flex items-center gap-2 btn-outline text-sm px-5 py-2.5 rounded-sm">
+        I'M INTERESTED <span>↗</span>
+      </a>
+    </div>
+
+    <!-- Tier Two -->
+    <div class="tier2 rounded-sm p-7">
+      <div class="flex items-center justify-between">
+        <span class="eyebrow text-[0.6rem]" style="color:#4B4526">THE SPOTLIGHT</span>
+        <span class="eyebrow text-[0.6rem]" style="color:#4B4526">$250 / YEAR</span>
+      </div>
+      <h3 class="serif text-3xl mt-3">Tier Two</h3>
+      <p class="mt-2 text-sm muted2"> For fans who want a closer look at the stories behind the work.</p>
+      <ul class="mt-5 space-y-2 text-sm">
+        <li class="flex items-center gap-2">✓ Everything in Tier One</li>
+        <li class="flex items-center gap-2">✓ Behind-the-scenes updates</li>
+        <li class="flex items-center gap-2">✓ Curated photo archive</li>
+        <li class="flex items-center gap-2">✓ Member-only giveaways </li>
+      </ul>
+      <a href="mailto:sweeneysmanagement@outlook.com?subject=I%27d%20like%20to%20join%20Tier%20Two&body=Hi!%20Tier%20Two%20caught%20my%20eye%20%E2%80%94%20I%27d%20love%20the%20behind-the-scenes%20updates%20and%20the%20curated%20photo%20archive.%20What%27s%20the%20next%20step%20to%20sign%20up%3F"
+         class="mt-6 inline-flex items-center gap-2 text-sm px-5 py-2.5 rounded-sm font-medium"
+         style="background:#1B1D10;color:var(--cream)">
+        I'M INTERESTED <span>↗</span>
+      </a>
+    </div>
+
+    <!-- Tier Three -->
+    <div class="panel rounded-sm p-7">
+      <div class="flex items-center justify-between">
+        <span class="eyebrow text-[0.6rem]">THE PREMIERE</span>
+        <span class="eyebrow text-[0.6rem]">$400 / YEAR</span>
+      </div>
+      <h3 class="serif text-3xl mt-3">Tier Three</h3>
+      <p class="mt-2 text-sm" style="color:var(--muted)">The full club experience for fans who want to feel right at the heart of it.</p>
+      <ul class="mt-5 space-y-2 text-sm">
+        <li class="flex items-center gap-2"><span style="color:var(--gold)">✓</span> Everything in Tier Two </li>
+        <li class="flex items-center gap-2"><span style="color:var(--gold)">✓</span> Priority event invitations </li>
+        <li class="flex items-center gap-2"><span style="color:var(--gold)">✓</span> Signed seasonal print </li>
+        <li class="flex items-center gap-2"><span style="color:var(--gold)">✓</span> Personal thank-you note </li>
+      </ul>
+      <a href="mailto:sweeneysmanagement@outlook.com?subject=I%27d%20like%20to%20join%20Tier%20Three&body=Hey!%20I%27m%20ready%20to%20go%20all%20in%20with%20Tier%20Three%20%E2%80%94%20priority%20invites%2C%20the%20signed%20print%2C%20all%20of%20it.%20Let%20me%20know%20how%20to%20make%20it%20official!"
+         class="mt-6 inline-flex items-center gap-2 btn-outline text-sm px-5 py-2.5 rounded-sm">
+        I'M INTERESTED <span>↗</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Testimonials -->
+<section id="reviews" class="max-w-3xl mx-auto px-6 mt-24 scroll-mt-24">
+  <div class="flex items-center gap-3 mb-5">
+    <span class="rule"></span>
+    <span class="eyebrow"> FROM THE COMMUNITY </span>
+  </div>
+  <h2 class="serif text-4xl leading-tight">
+    Kind words from <span class="italic" style="color:var(--gold)">fellow fans.</span>
+  </h2>
+
+  <div class="mt-10 space-y-5">
+    <div class="panel rounded-sm p-7">
+      <div class="serif text-3xl leading-none" style="color:var(--gold)">&ldquo;</div>
+      <p class="serif text-xl mt-3 leading-snug">It feels like a little corner of the internet made by fans, for fans. Thoughtful, warm, and never overdone.</p>
+      <div class="mt-6 pt-4 border-t" style="border-color:var(--panel-line)">
+        <div class="text-sm font-medium tracking-wide">MAYA R.</div>
+        <div class="text-xs mt-1" style="color:var(--muted)">Member since 2024, Tier Three.</div>
+      </div>
+    </div>
+    <div class="panel rounded-sm p-7">
+      <div class="serif text-3xl leading-none" style="color:var(--gold)">&ldquo;</div>
+      <p class="serif text-xl mt-3 leading-snug">The small details are my favourite — the notes, the stories, and feeling part of something special.</p>
+      <div class="mt-6 pt-4 border-t" style="border-color:var(--panel-line)">
+        <div class="text-sm font-medium tracking-wide">JORDAN L.</div>
+        <div class="text-xs mt-1" style="color:var(--muted)">Tier Two member</div>
+      </div>
+    </div>
+    <div class="panel rounded-sm p-7">
+      <div class="serif text-3xl leading-none" style="color:var(--gold)">&ldquo;</div>
+      <p class="serif text-xl mt-3 leading-snug">Joining was an easy way to show my support. Everything feels personal and genuinely made with care.</p>
+      <div class="mt-6 pt-4 border-t" style="border-color:var(--panel-line)">
+        <div class="text-sm font-medium tracking-wide">AVA T.</div>
+        <div class="text-xs mt-1" style="color:var(--muted)">Tier One member</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- A little note -->
+<section class="max-w-3xl mx-auto px-6 mt-24">
+  <div class="panel rounded-sm p-8 sm:p-10">
+    <div class="flex items-center gap-3 mb-5">
+      <span class="rule"></span>
+      <span class="eyebrow">JOIN NOW</span>
+    </div>
+    <h2 class="serif text-4xl leading-tight">
+      Find your <span class="italic" style="color:var(--gold)">tier.</span>
+    </h2>
+    <p class="mt-4 max-w-md text-[0.95rem] leading-relaxed" style="color:var(--muted)">
+      Choose the membership that feels right, then send us a note. We'll take it from there.
+    </p>
+  </div>
+</section>
+
+<!-- The footer -->
+<footer class="max-w-3xl mx-auto px-6 mt-20 pb-10 pt-8 border-t" style="border-color:var(--panel-line)">
+  <div class="serif text-lg tracking-[0.15em]"> Sydney Sweeney </div>
+  <div class="eyebrow text-[0.6rem] mt-1" style="color:var(--muted)">OFFICIAL FAN CLUB</div>
+  <div class="text-xs mt-4" style="color:var(--muted)">© 2026 Sydney Sweeney Fan Club</div>
+</footer>
+
+<script>
+  // ---- Mobile / dropdown menu ----
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const barTop = document.getElementById('barTop');
+  const barBottom = document.getElementById('barBottom');
+
+  function closeMenu() {
+    mobileMenu.classList.add('hidden');
+    menuBtn.setAttribute('aria-expanded', 'false');
+    barTop.style.transform = '';
+    barBottom.style.transform = '';
+  }
+  function openMenu() {
+    mobileMenu.classList.remove('hidden');
+    menuBtn.setAttribute('aria-expanded', 'true');
+    barTop.style.transform = 'translateY(3.5px) rotate(45deg)';
+    barBottom.style.transform = 'translateY(-3.5px) rotate(-45deg)';
+  }
+  menuBtn.addEventListener('click', () => {
+    const isOpen = menuBtn.getAttribute('aria-expanded') === 'true';
+    isOpen ? closeMenu() : openMenu();
+  });
+  document.querySelectorAll('[data-menu-link]').forEach(link => {
+    link.addEventListener('click', closeMenu);
+  });
+</script>
+</body>
+</html>
